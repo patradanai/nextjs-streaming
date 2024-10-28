@@ -8,9 +8,9 @@ interface Props {
     children: React.ReactNode
 }
 
-const queryClient = new QueryClient()
-
 export const QueryProvider: NextPage<Props> = (props) => {
+    const queryClient = new QueryClient()
+
     return (
         <>
             <QueryClientProvider client={queryClient}>

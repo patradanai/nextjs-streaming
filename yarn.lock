@@ -1213,6 +1213,11 @@
   dependencies:
     "@sinonjs/commons" "^3.0.0"
 
+"@socket.io/component-emitter@~3.1.0":
+  "integrity" "sha512-9BCxFwvbGg/RsZK9tjXd8s4UcwR0MWeFQ1XEKIQVVvAGJyINdrqKMcTRyLoK8Rse1GjzLV9cwjWV1olXRWEXVA=="
+  "resolved" "https://registry.npmjs.org/@socket.io/component-emitter/-/component-emitter-3.1.2.tgz"
+  "version" "3.1.2"
+
 "@streamparser/json@^0.0.6":
   "integrity" "sha512-vL9EVn/v+OhZ+Wcs6O4iKE9EUpwHUqHmCtNUMWjqp+6dr85+XPOSGTEsqYNq1Vn04uk9SWlOVmx9J48ggJVT2Q=="
   "resolved" "https://registry.npmjs.org/@streamparser/json/-/json-0.0.6.tgz"
@@ -2890,7 +2895,7 @@
   dependencies:
     "ms" "^2.1.1"
 
-"debug@^4.0.0", "debug@^4.1.0", "debug@^4.1.1", "debug@^4.3.1", "debug@^4.3.2", "debug@^4.3.4", "debug@4":
+"debug@^4.0.0", "debug@^4.1.0", "debug@^4.1.1", "debug@^4.3.1", "debug@^4.3.2", "debug@^4.3.4", "debug@~4.3.1", "debug@~4.3.2", "debug@4":
   "integrity" "sha512-PRWFHuSU3eDtQJPvnNY7Jcket1j0t5OuOsFzPPzsekD52Zl8qUfFIPEiswXqIvHWGVHOgX+7G/vCNNhehwxfkQ=="
   "resolved" "https://registry.npmjs.org/debug/-/debug-4.3.4.tgz"
   "version" "4.3.4"
@@ -3142,6 +3147,22 @@
   "version" "0.1.13"
   dependencies:
     "iconv-lite" "^0.6.2"
+
+"engine.io-client@~6.6.1":
+  "integrity" "sha512-TAr+NKeoVTjEVW8P3iHguO1LO6RlUz9O5Y8o7EY0fU+gY1NYqas7NN3slpFtbXEsLMHk0h90fJMfKjRkQ0qUIw=="
+  "resolved" "https://registry.npmjs.org/engine.io-client/-/engine.io-client-6.6.2.tgz"
+  "version" "6.6.2"
+  dependencies:
+    "@socket.io/component-emitter" "~3.1.0"
+    "debug" "~4.3.1"
+    "engine.io-parser" "~5.2.1"
+    "ws" "~8.17.1"
+    "xmlhttprequest-ssl" "~2.1.1"
+
+"engine.io-parser@~5.2.1":
+  "integrity" "sha512-HqD3yTBfnBxIrbnM1DoD6Pcq8NECnh8d4As1Qgh0z5Gg3jRRIqijury0CL3ghu/edArpUYiYqQiDUQBIs4np3Q=="
+  "resolved" "https://registry.npmjs.org/engine.io-parser/-/engine.io-parser-5.2.3.tgz"
+  "version" "5.2.3"
 
 "enhanced-resolve@^5.12.0":
   "integrity" "sha512-LXYT42KJ7lpIKECr2mAXIaMldcNCh/7E0KBKOu4KSfkHmP+mZmSs+8V5gBAqisWBy0OO4W5Oyys0GO1Y8KtdKg=="
@@ -8972,6 +8993,24 @@
     "dot-case" "^3.0.4"
     "tslib" "^2.0.3"
 
+"socket.io-client@^4.8.1":
+  "integrity" "sha512-hJVXfu3E28NmzGk8o1sHhN3om52tRvwYeidbj7xKy2eIIse5IoKX3USlS6Tqt3BHAtflLIkCQBkzVrEEfWUyYQ=="
+  "resolved" "https://registry.npmjs.org/socket.io-client/-/socket.io-client-4.8.1.tgz"
+  "version" "4.8.1"
+  dependencies:
+    "@socket.io/component-emitter" "~3.1.0"
+    "debug" "~4.3.2"
+    "engine.io-client" "~6.6.1"
+    "socket.io-parser" "~4.2.4"
+
+"socket.io-parser@~4.2.4":
+  "integrity" "sha512-/GbIKmo8ioc+NIWIhwdecY0ge+qVBSMdgxGygevmdHj24bsfgtCmcUUcQ5ZzcylGFHsN3k4HB4Cgkl96KVnuew=="
+  "resolved" "https://registry.npmjs.org/socket.io-parser/-/socket.io-parser-4.2.4.tgz"
+  "version" "4.2.4"
+  dependencies:
+    "@socket.io/component-emitter" "~3.1.0"
+    "debug" "~4.3.1"
+
 "socks-proxy-agent@^8.0.1":
   "version" "8.0.2"
   dependencies:
@@ -10227,10 +10266,10 @@
     "imurmurhash" "^0.1.4"
     "signal-exit" "^4.0.1"
 
-"ws@^8.11.0", "ws@^8.16.0":
-  "integrity" "sha512-HS0c//TP7Ina87TfiPUz1rQzMhHrl/SG2guqRcTOIUYD2q8uhUdNHZYJUaQ8aTGPzCh+c6oawMKW35nFl1dxyQ=="
-  "resolved" "https://registry.npmjs.org/ws/-/ws-8.16.0.tgz"
-  "version" "8.16.0"
+"ws@^8.11.0", "ws@^8.16.0", "ws@~8.17.1":
+  "integrity" "sha512-6XQFvXTkbfUOZOKKILFG1PDK2NDQs4azKQl26T0YS5CxqWLgXajbPZ+h4gZekJyRqFU8pvnbAbbs/3TgRPy+GQ=="
+  "resolved" "https://registry.npmjs.org/ws/-/ws-8.17.1.tgz"
+  "version" "8.17.1"
 
 "xml-name-validator@^4.0.0":
   "integrity" "sha512-ICP2e+jsHvAj2E2lIHxa5tjXRlKDJo4IdvPvCXbXQGdzSfmSpNVyIKMvoZHjDY9DP0zV17iI85o90vRFXNccRw=="
@@ -10246,6 +10285,11 @@
   "integrity" "sha512-JZnDKK8B0RCDw84FNdDAIpZK+JuJw+s7Lz8nksI7SIuU3UXJJslUthsi+uWBUYOwPFwW7W7PRLRfUKpxjtjFCw=="
   "resolved" "https://registry.npmjs.org/xmlchars/-/xmlchars-2.2.0.tgz"
   "version" "2.2.0"
+
+"xmlhttprequest-ssl@~2.1.1":
+  "integrity" "sha512-TEU+nJVUUnA4CYJFLvK5X9AOeH4KvDvhIfm0vV1GaQRtchnG0hgK5p8hw/xjv8cunWYCsiPCSDzObPyhEwq3KQ=="
+  "resolved" "https://registry.npmjs.org/xmlhttprequest-ssl/-/xmlhttprequest-ssl-2.1.2.tgz"
+  "version" "2.1.2"
 
 "y18n@^5.0.5":
   "integrity" "sha512-0pfFzegeDWJHJIAmTLRP2DwHjdF5s7jo9tuztdQxAhINCdvS+3nGINqPd00AphqJR/0LhANUS6/+7SCb98YOfA=="
