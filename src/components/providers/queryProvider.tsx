@@ -10,7 +10,7 @@ interface Props {
 
 const queryClient = new QueryClient()
 
-export const QueryWrapper: NextPage<Props> = (props) => {
+export const QueryProvider: NextPage<Props> = (props) => {
     return (
         <>
             <QueryClientProvider client={queryClient}>

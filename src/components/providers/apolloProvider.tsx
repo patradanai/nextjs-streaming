@@ -8,7 +8,7 @@ interface Props {
     children: React.ReactNode
 }
 
-export const ApolloWrapper: NextPage<Props> = ({ children }) => {
+export const ApolloProvider: NextPage<Props> = ({ children }) => {
     return (
         <>
             <ApolloNextAppProvider makeClient={makeClient}>

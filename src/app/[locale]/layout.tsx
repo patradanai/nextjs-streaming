@@ -3,7 +3,7 @@ import React from 'react'
 import { NextIntlClientProvider, useMessages } from 'next-intl'
 
 import { ApolloWrapper } from '@/components/ApolloWrapper'
-import { SnackBarProvider } from '@/contexts/snackbar/snackbarContext'
+import { SnackBarProvider } from '@/components/providers/snackbarContext'
 
 export default function RootLayout({
     children,

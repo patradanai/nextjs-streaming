@@ -10,11 +10,11 @@ interface Props {
     permissions: PermissionEmun
 }
 
-export const RoleChecker: NextPage<Props> = ({ children, permissions }) => {
+export const RoleProvider: NextPage<Props> = ({ children, permissions }) => {
     return _.get([], permissions) ? <>{children}</> : null
 }
 
-RoleChecker.propTypes = {
+RoleProvider.propTypes = {
     children: PropTypes.node.isRequired as Validator<ReactNode>,
     permissions: PropTypes.oneOf<PermissionEmun>(['create', 'update', 'delete'])
         .isRequired,
