@@ -10,7 +10,7 @@ import {
 } from '@/types/authentication'
 import { IHTTPResponse } from '@/types/common'
 
-export abstract class IAuthRepository {
+export abstract class AuthRepository {
     abstract signIn(data: ISignInRequest): Promise<ISignInResponse>
     abstract signOut(data: ISignOutRequest): Promise<ISignOutResponse>
     abstract signUp(

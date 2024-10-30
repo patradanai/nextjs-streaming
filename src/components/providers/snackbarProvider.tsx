@@ -1,25 +1,14 @@
 'use client'
 
-import { createContext, useContext, useState } from 'react'
+import { useContext, useState } from 'react'
 
 import { NextPage } from 'next'
 
 import { Snackbar } from '@/components/ui/Snackbar'
-
-export const SnackbarContext = createContext<ISnackbarContext | null>(null)
+import { IMessage, SnackbarContext } from '@/contexts/snackbarContext'
 
 interface Props {
     children: React.ReactNode
-}
-
-interface IMessage {
-    id?: string
-    message: string
-    type: 'success' | 'error' | 'warning' | 'info'
-}
-
-interface ISnackbarContext {
-    enqueueSnackbar: (message: IMessage) => void
 }
 
 const SnackBarProvider: NextPage<Props> = (props) => {

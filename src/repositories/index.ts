@@ -1,12 +1,11 @@
 import { AuthRepositoryImplMock } from './__mock__/authRepositoryMock'
 import { ExampleRepositoryImplMock } from './__mock__/exmapleRepositoryMock'
-import { ResourceRepositoryImplMock } from './__mock__/hygraphRepositoryMock'
-import { IAuthRepository } from './authRepository'
+import { AuthRepository } from './authRepository'
 import { ExampleRepository } from './exampleRepository'
-import { IResourceRepository } from './hygraphRepository'
 import { AuthRepositoryImpl } from './implements/authRepositoryImpl'
 import { ExampleRepositoryImpl } from './implements/exampleRepositoryImpl'
-import { ResourceRepositoryImpl } from './implements/resourceRepositoryImpl'
+import { SocketRepositoryImpl } from './implements/socketRepositoryImpl'
+import { SocketRepository } from './socketRepository'
 
 /**
  * Repositories
@@ -16,14 +15,14 @@ import { ResourceRepositoryImpl } from './implements/resourceRepositoryImpl'
 
 interface IReposities {
     exampleRepository: ExampleRepository
-    authRepository: IAuthRepository
-    resourceRepository: IResourceRepository
+    authRepository: AuthRepository
+    socketRepository: SocketRepository
 }
 
 class BaseRepostiory {
     exampleRepository: ExampleRepository
-    authRepository: IAuthRepository
-    resourceRepository: IResourceRepository
+    authRepository: AuthRepository
+    socketRepository: SocketRepository
 
     constructor(
         options: IReposities,
@@ -35,7 +34,7 @@ class BaseRepostiory {
         // 1. Declear Repositories
         this.exampleRepository = options.exampleRepository
         this.authRepository = options.authRepository
-        this.resourceRepository = options.resourceRepository
+        this.socketRepository = options.socketRepository
 
         const envonment = process.env.NODE_ENV ?? 'development'
 
@@ -46,7 +45,7 @@ class BaseRepostiory {
             // 2. Declear Override Repositories
             this.exampleRepository = overrideReposities.exampleRepository
             this.authRepository = overrideReposities.authRepository
-            this.resourceRepository = overrideReposities.resourceRepository
+            this.socketRepository = overrideReposities.socketRepository
         }
     }
 }
@@ -55,18 +54,18 @@ export const reposities = new BaseRepostiory(
     {
         exampleRepository: new ExampleRepositoryImpl(),
         authRepository: new AuthRepositoryImpl(),
-        resourceRepository: new ResourceRepositoryImpl(),
+        socketRepository: new SocketRepositoryImpl(),
     },
     {
         stub: {
             exampleRepository: new ExampleRepositoryImplMock(),
             authRepository: new AuthRepositoryImplMock(),
-            resourceRepository: new ResourceRepositoryImplMock(),
+            socketRepository: new SocketRepositoryImpl(),
         },
         development: {
             exampleRepository: new ExampleRepositoryImplMock(),
             authRepository: new AuthRepositoryImplMock(),
-            resourceRepository: new ResourceRepositoryImplMock(),
+            socketRepository: new SocketRepositoryImpl(),
         },
     }
 )
