@@ -34,7 +34,7 @@ export const LocaleSwitchingSelect: NextPage<Props> = ({
         <label
             className={cn(
                 'relative text-gray-400',
-                isPending && 'transition-opacity [&:disabled]:opacity-30'
+                isPending && 'transition-opacity disabled:opacity-30'
             )}
         >
             <p className="sr-only">{label}</p>

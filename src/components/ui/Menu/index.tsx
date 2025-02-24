@@ -21,7 +21,7 @@ const MenuList: NextPage<IPropMenuList> = (props) => {
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         transition={{ duration: 0.5 }}
-                        className="absolute -left-1/2 top-1/2 z-[999] min-h-full min-w-[100px] rounded-md bg-white py-2 transition-opacity"
+                        className="absolute -left-1/2 top-1/2 z-999 min-h-full min-w-[100px] rounded-md bg-white py-2 transition-opacity"
                         onMouseLeave={onMouseLeave}
                     >
                         {children}

@@ -45,7 +45,7 @@ export const Sidebar: NextPage = () => {
     return (
         <aside
             className={cn(
-                `fixed inset-0 h-full z-[100] pt-5 motion-reduce:transition-none transition-all ease-in-out delay-150 bg-white ${
+                `fixed inset-0 h-full z-100 pt-5 motion-reduce:transition-none transition-all ease-in-out delay-150 bg-white ${
                     isShowSidebar ? 'w-[260px]' : 'w-[78px]'
                 }`
             )}

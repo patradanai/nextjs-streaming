@@ -35,7 +35,7 @@ export const ModalTransform: NextPage<IModalTransform> = ({
                     transition={{ duration: 1 }}
                     className={`${
                         isModal ? 'pointer-events-auto' : 'pointer-events-none'
-                    } fixed left-0 top-0 z-[100] size-full min-w-[600px]`}
+                    } fixed left-0 top-0 z-100 size-full min-w-[600px]`}
                 >
                     <div
                         ref={refDiv}

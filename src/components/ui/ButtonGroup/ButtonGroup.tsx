@@ -13,7 +13,7 @@ interface Props {
 }
 
 const ButtonGroup: NextPage<Props> = ({ children }) => {
-    return <div className="inline-flex rounded-md shadow-sm">{children}</div>
+    return <div className="inline-flex rounded-md shadow-xs">{children}</div>
 }
 
 export default ButtonGroup

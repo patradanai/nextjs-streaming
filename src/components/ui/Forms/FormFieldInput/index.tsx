@@ -69,7 +69,7 @@ export const InputField: NextPage<Props> = ({
                                 </label>
                             </div>
                         )}
-                        <div className="focus-within:outline-blue box-border flex w-full items-center overflow-hidden  rounded outline outline-1 outline-[#e6e6e6] focus-within:outline-2">
+                        <div className="focus-within:outline-blue box-border flex w-full items-center overflow-hidden  rounded-sm outline outline-1 outline-[#e6e6e6] focus-within:outline-2">
                             {startIcon && (
                                 <div className="grid h-[38px] w-[45px] place-items-center bg-[#f2f2f2]">
                                     {startIcon}
@@ -90,7 +90,7 @@ export const InputField: NextPage<Props> = ({
                                             disabled,
                                     },
                                     cn(
-                                        'bg-white placeholder-[#9c9b9b] placeholder:text-sm appearance-none outline-none rounded w-full h-[38px] px-4',
+                                        'bg-white placeholder-[#9c9b9b] placeholder:text-sm appearance-none outline-hidden rounded-sm w-full h-[38px] px-4',
                                         inputClassName
                                     )
                                 )}

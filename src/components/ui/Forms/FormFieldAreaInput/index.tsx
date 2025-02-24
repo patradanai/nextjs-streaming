@@ -62,7 +62,7 @@ export const InputArea: NextPage<Props> = ({
                                 disabled,
                         },
                         cn(
-                            'bg-white placeholder-[#9c9b9b] placeholder:text-sm appearance-none outline-none h-full min-h-[100px] p-5 border border-[#e6e6e6] rounded w-full',
+                            'bg-white placeholder-[#9c9b9b] placeholder:text-sm appearance-none outline-hidden h-full min-h-[100px] p-5 border border-[#e6e6e6] rounded-sm w-full',
                             inputClassName
                         )
                     )}

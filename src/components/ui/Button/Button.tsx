@@ -78,7 +78,7 @@ const Button: NextPage<Props> = ({
             type={type}
             disabled={disabled || loading}
             className={cn(
-                'h-fit w-full gap-3 flex transition-colors justify-center items-center whitespace-nowrap shadow-sm hover:shadow-md rounded-md',
+                'h-fit w-full gap-3 flex transition-colors justify-center items-center whitespace-nowrap shadow-xs hover:shadow-md rounded-md',
                 sizes[size],
                 colors[color],
                 variants[variant],

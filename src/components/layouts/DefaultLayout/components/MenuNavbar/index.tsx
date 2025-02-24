@@ -8,7 +8,7 @@ import MenuNavbarItem from '../MenuNavbarItem'
 
 const MenuNavbar: NextPage = () => {
     return (
-        <div className="hidden w-full bg-gradient-to-l from-[#871937] via-[#2a3b7b] to-[#871937] md:block">
+        <div className="hidden w-full bg-linear-to-l from-[#871937] via-[#2a3b7b] to-[#871937] md:block">
             <div className="w-full ">
                 <div className="flex size-full items-center justify-between">
                     <div className="container mx-auto size-full">

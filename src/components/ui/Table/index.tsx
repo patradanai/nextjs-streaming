@@ -300,7 +300,7 @@ const Table = <T extends object>({
 
 const IndeterminateCheckbox = ({
     indeterminate,
-    className = 'text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:bg-gray-700 dark:border-gray-600 h-4 w-4 rounded focus:ring-2',
+    className = 'text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:bg-gray-700 dark:border-gray-600 h-4 w-4 rounded-sm focus:ring-2',
     ...rest
 }: { indeterminate?: boolean } & HTMLProps<HTMLInputElement>) => {
     const ref = React.useRef<HTMLInputElement>(null)
@@ -349,7 +349,7 @@ export { Table, IndeterminateCheckbox }
 //           ])
 //         }
 //         placeholder={`Min`}
-//         className="w-24 border shadow rounded"
+//         className="w-24 border shadow-sm rounded-sm"
 //       />
 //       <input
 //         type="number"
@@ -361,7 +361,7 @@ export { Table, IndeterminateCheckbox }
 //           ])
 //         }
 //         placeholder={`Max`}
-//         className="w-24 border shadow rounded"
+//         className="w-24 border shadow-sm rounded-sm"
 //       />
 //     </div>
 //   ) : (
@@ -370,7 +370,7 @@ export { Table, IndeterminateCheckbox }
 //       value={(columnFilterValue ?? '') as string}
 //       onChange={e => column.setFilterValue(e.target.value)}
 //       placeholder={`Search...`}
-//       className="w-36 border shadow rounded"
+//       className="w-36 border shadow-sm rounded-sm"
 //     />
 //   )
 // }

@@ -61,7 +61,7 @@ const HomeModule: NextPage<Props> = ({ resource }) => {
                         target="_blank"
                         rel="noreferrer"
                     >
-                        <Button className="h-10 w-full rounded-none border border-yellow-500 bg-gradient-to-t from-primary via-[#48088b]/50 to-[#a70ce7] text-black">
+                        <Button className="h-10 w-full rounded-none border border-yellow-500 bg-linear-to-t from-primary via-[#48088b]/50 to-[#a70ce7] text-black">
                             <span className="text-xl font-semibold">Login</span>
                         </Button>
                     </a>
@@ -70,7 +70,7 @@ const HomeModule: NextPage<Props> = ({ resource }) => {
                         target="_blank"
                         rel="noreferrer"
                     >
-                        <Button className="h-10 w-full rounded-none border border-yellow-500 bg-gradient-to-t from-primary via-[#48088b]/50 to-[#a70ce7] text-black">
+                        <Button className="h-10 w-full rounded-none border border-yellow-500 bg-linear-to-t from-primary via-[#48088b]/50 to-[#a70ce7] text-black">
                             <span className="text-xl font-semibold">
                                 Signup
                             </span>

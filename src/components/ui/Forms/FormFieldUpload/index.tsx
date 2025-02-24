@@ -58,7 +58,7 @@ export const InputUpload: NextPage<Props> = ({
                     )}
                 </label>
                 <button
-                    className="absolute -right-5 top-0 z-[9999] flex cursor-pointer items-center rounded-full bg-primary/20 p-1"
+                    className="absolute -right-5 top-0 z-9999 flex cursor-pointer items-center rounded-full bg-primary/20 p-1"
                     onClick={handleCancel}
                 >
                     <FontAwesomeIcon icon={faClose} className="size-8" />
