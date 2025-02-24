@@ -1,8 +1,8 @@
-import React, { ReactNode, Validator } from 'react'
+import type * as PropTypes from "prop-types";
+import React, { ReactNode } from 'react';
 
 import _ from 'lodash'
 import { NextPage } from 'next'
-import PropTypes from 'prop-types'
 
 type PermissionEmun = 'create' | 'update' | 'delete'
 interface Props {
@@ -10,12 +10,14 @@ interface Props {
     permissions: PermissionEmun
 }
 
-export const RoleProvider: NextPage<Props> = ({ children, permissions }) => {
-    return _.get([], permissions) ? <>{children}</> : null
+interface RoleProviderProps {
+    children?: unknown;
+    permissions: "create" | "update" | "delete";
 }
 
-RoleProvider.propTypes = {
-    children: PropTypes.node.isRequired as Validator<ReactNode>,
-    permissions: PropTypes.oneOf<PermissionEmun>(['create', 'update', 'delete'])
-        .isRequired,
+export const RoleProvider: NextPage<Props> = ({
+    children,
+    permissions
+}: RoleProviderProps) => {
+    return _.get([], permissions) ? <>{children}</> : null
 }

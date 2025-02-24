@@ -17,7 +17,7 @@ export const TabMenu: NextPage<Props> = ({
     rightComponent,
     afterIndex,
 }) => {
-    const [childs, setChilds] = useState<React.ReactChild[]>()
+    const [childs, setChilds] = useState<(React.ReactElement<any> | number | string)[]>()
     const [currentIndex, setCurrentIndex] = useState<number>(0)
 
     const handleChange = (index: number) => {
@@ -27,7 +27,7 @@ export const TabMenu: NextPage<Props> = ({
 
     useEffect(() => {
         const arrayChild = Children.toArray(children)
-        const childElement: React.ReactChild[] = []
+        const childElement: (React.ReactElement<any> | number | string)[] = []
 
         Children.map(arrayChild, (val, idx) => {
             childElement.push(

@@ -8,13 +8,22 @@ import type { Metadata } from 'next'
 import DefaultLayout from '@/components/layouts/DefaultLayout/DefaultLayout'
 import { resourceService } from '@/services/implements'
 import { env } from '@/utils/env'
-export default function RootLayout({
-    children,
-    params: { locale },
-}: {
-    children: React.ReactNode
-    params: { locale: string }
-}) {
+export default async function RootLayout(
+    props: {
+        children: React.ReactNode
+        params: Promise<{ locale: string }>
+    }
+) {
+    const params = await props.params;
+
+    const {
+        locale
+    } = params;
+
+    const {
+        children
+    } = props;
+
     return (
         <html lang={locale}>
             <body>

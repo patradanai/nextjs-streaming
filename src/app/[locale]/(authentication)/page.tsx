@@ -11,7 +11,7 @@ import { logger } from '@/utils/logger'
 import { StructureData } from '@/utils/structureData'
 
 const HomePage: NextPage = async () => {
-    const headersList = headers()
+    const headersList = await headers()
     const data = await resourceService.getResource({
         id: env.NEXT_PUBLIC_RESOURCE_ID,
     })
