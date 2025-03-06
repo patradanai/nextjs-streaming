@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-unused-vars, @typescript-eslint/no-var-requires
-const createNextIntlPlugin = require('next-intl/plugin')
+import nextIntl from "next-intl/plugin";
 
-const withNextIntl = createNextIntlPlugin()
+const withNextIntl = nextIntl("./src/i18n.ts");
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -12,4 +12,4 @@ const nextConfig = {
     output: 'standalone',
 }
 
-module.exports = withNextIntl(nextConfig)
+export default withNextIntl(nextConfig)

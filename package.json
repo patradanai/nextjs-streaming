@@ -2,9 +2,10 @@
   "name": "ddl02",
   "version": "0.1.0",
   "private": true,
-  "type": "commonjs",
+  "type": "module",
   "scripts": {
     "dev": "next dev --turbopack",
+    "mock": "APP_ENV=stub next dev --turbopack",
     "build": "next build",
     "postbuild": "next-sitemap --config next-sitemap.config.js",
     "start": "next start",

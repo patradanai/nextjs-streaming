@@ -36,7 +36,7 @@ class BaseRepostiory {
         this.authRepository = options.authRepository
         this.socketRepository = options.socketRepository
 
-        const envonment = process.env.NODE_ENV ?? 'development'
+        const envonment = process.env.APP_ENV ?? 'development'
 
         const overrideEnvronment = override[envonment]
         if (overrideEnvronment) {

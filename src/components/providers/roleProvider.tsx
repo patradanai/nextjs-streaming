@@ -1,5 +1,4 @@
-import type * as PropTypes from "prop-types";
-import React, { ReactNode } from 'react';
+import React from 'react';
 
 import _ from 'lodash'
 import { NextPage } from 'next'
