@@ -2,8 +2,7 @@ import React from 'react'
 
 import { NextPage } from 'next'
 import { usePathname } from 'next/navigation'
-
-import { Link } from '@/utils/i18n/navigation'
+import { Link } from '@/i18n/navigation'
 
 interface Props {
     name: string
@@ -16,7 +15,7 @@ const ListMenuDropdownChild: NextPage<Props> = ({ name, src }) => {
     return (
         <Link href={src}>
             <li
-                className={`group flex h-[44px] items-center px-[27px] before:mx-3 before:text-black before:content-['-']  hover:bg-[#475fd2] ${
+                className={`group flex h-[44px] items-center px-[27px] before:mx-3 before:text-black before:content-['-'] hover:bg-[#475fd2] ${
                     pathname === src ? 'bg-[#475fd2]' : ''
                 } `}
             >

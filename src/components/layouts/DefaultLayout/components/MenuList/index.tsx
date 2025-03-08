@@ -1,8 +1,7 @@
 import React, { FC } from 'react'
 
 import { usePathname } from 'next/navigation'
-
-import { Link } from '@/utils/i18n/navigation'
+import Link from 'next/link'
 
 interface IListMenu {
     icons: React.ReactNode
@@ -26,7 +25,7 @@ const ListMenu: FC<IListMenu> = ({ icons, name, status, src, onClick }) => {
                 <Link href={src}>
                     <div className="flex cursor-pointer flex-row items-center space-x-2 px-[27px]">
                         <div
-                            className={` group-hover:text-[#ffffff] ${
+                            className={`group-hover:text-[#ffffff] ${
                                 pathname === src
                                     ? 'text-[#ffffff]'
                                     : 'text-black'

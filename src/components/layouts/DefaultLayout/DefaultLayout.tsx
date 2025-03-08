@@ -1,8 +1,11 @@
+'use client'
 import React from 'react'
 
 import { NextPage } from 'next'
 
 import { Header } from './Header'
+import { Sidebar } from './Sidebar'
+import { useGlobalStore } from '@/stores/useGlobalStore'
 
 /**
  *
@@ -15,21 +18,26 @@ interface Props {
 }
 
 const DefaultLayout: NextPage<Props> = ({ children }) => {
+    const isShowSidebar = useGlobalStore((state) => state.isShowSidebar)
+
     return (
-        <div className="box-border flex min-h-screen w-full flex-col justify-between overflow-auto">
-            <Header />
-            <div className="mb-auto flex size-full flex-row">
-                <div className={'size-full'}>
-                    <div className="relative">
-                        <div className="size-full overflow-y-auto">
-                            {children}
+        <div className="box-border flex min-h-screen w-full min-w-[1440px] flex-col justify-between overflow-auto bg-[#F2F3F8]">
+            <div className="mb-auto flex h-full w-full flex-row">
+                <Sidebar />
+                <div className={'h-full w-full'}>
+                    <div
+                        className={`${
+                            isShowSidebar ? 'pl-[260px]' : 'pl-[78px]'
+                        } h-full w-full transition-all duration-500 ease-in-out`}
+                    >
+                        <div className="relative">
+                            <div className="h-full w-full overflow-y-auto bg-[#F2F3F8]">
+                                {children}
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            {/* <Footer /> */}
-            {/* Floating Menu */}
-            {/* <MenuFloating /> */}
         </div>
     )
 }

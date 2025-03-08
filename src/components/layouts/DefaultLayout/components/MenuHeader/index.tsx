@@ -7,7 +7,7 @@ interface IListMenuDropHeader {
     isShowSidebar: boolean
 }
 
-export const ListMenuDropHeader: NextPage<IListMenuDropHeader> = ({
+const ListMenuDropHeader: NextPage<IListMenuDropHeader> = ({
     headerName,
     isShowSidebar,
 }) => {
@@ -15,7 +15,7 @@ export const ListMenuDropHeader: NextPage<IListMenuDropHeader> = ({
         <>
             <li className="mt-5 h-[25px] px-[27px] text-[#3b3b3c]">
                 {isShowSidebar ? (
-                    <p className="text-base uppercase text-primary">
+                    <p className="text-primary text-base uppercase">
                         {headerName}
                     </p>
                 ) : (
@@ -27,3 +27,5 @@ export const ListMenuDropHeader: NextPage<IListMenuDropHeader> = ({
         </>
     )
 }
+
+export default ListMenuDropHeader

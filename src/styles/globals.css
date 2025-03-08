@@ -1,14 +1,11 @@
 @import 'tailwindcss';
+@plugin "@tailwindcss/typography";
 
-@import '@fortawesome/fontawesome-svg-core/styles.css' layer(utilities);
-@import 'react-loading-skeleton/dist/skeleton.css' layer(utilities);
-@import '~react-datepicker/dist/react-datepicker.css' layer(utilities);
-@import 'slick-carousel/slick/slick.css' layer(utilities);
-@import 'slick-carousel/slick/slick-theme.css' layer(utilities);
+@import '@fortawesome/fontawesome-svg-core/styles.css';
+@import 'react-loading-skeleton/dist/skeleton.css';
 
-@import './carousel.css' layer(utilities);
-
-@plugin '@tailwindcss/typography';
+@import 'react-datepicker/dist/react-datepicker.css';
+@import './carousel.css'; 
 
 @theme {
   --animate-scale: scale 1s linear infinite;

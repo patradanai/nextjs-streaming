@@ -1,21 +1,12 @@
 import createMiddleware from 'next-intl/middleware'
 
-import {
-    defaultLocale,
-    localePrefix,
-    locales,
-} from '@/configs/i18n.config'
+
 
 import { MiddlewareFactory } from './stackMiddleware'
+import { routing } from '@/i18n/routing'
 
 export const i18nMiddleware: MiddlewareFactory = () => {
-    const i18nMiddleware = createMiddleware({
-        // A list of all locales that are supported
-        locales,
-        // Used when no locale matches
-        defaultLocale,
-        localePrefix, // This is the default
-    })
+    const i18nMiddleware = createMiddleware(routing)
 
     return i18nMiddleware
 }

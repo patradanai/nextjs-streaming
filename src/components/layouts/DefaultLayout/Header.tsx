@@ -4,25 +4,47 @@ import { NextPage } from 'next'
 
 import { ImageLoader } from '@/components/ui/ImageLoader'
 import { env } from '@/utils/env'
+import { useGlobalStore } from '@/stores/useGlobalStore'
+import { useShallow } from 'zustand/react/shallow'
 
 interface IHeader {}
 
 export const Header: NextPage<IHeader> = async () => {
+    const { name, isShowSidebar } = useGlobalStore(
+        useShallow((state) => ({
+            isShowSidebar: state.isShowSidebar,
+            name: state.name,
+        }))
+    )
+
     return (
-        <div className="relative">
-            <nav className={'z-50 w-full bg-transparent'}>
-                <div className="container mx-auto flex h-[120px] w-full flex-col items-center justify-center">
-                    <div className="relative h-full w-[400px]">
+        <nav
+            className={`fixed inset-x-0 ${
+                isShowSidebar ? 'pl-[260px]' : 'pl-[78px]'
+            } transition-all duration-500 ease-in-out`}
+        >
+            <div className="border-b-secondary flex h-[75px] flex-row items-center justify-between border-b-[1px] bg-white">
+                {/* Agent Name */}
+                <div className="text-primary ml-6 h-10 rounded bg-[#f0f3ff] p-3 text-sm">
+                    {name}
+                </div>
+
+                {/* User Info */}
+                <div className="ml-auto mr-6 flex h-14 cursor-pointer flex-row items-center rounded-full py-2 pl-2 text-sm hover:bg-[#f0f3ff]">
+                    <p className="text-sm text-[#959cb6]">Hi, </p>
+                    <p className="indent-1 text-[#6c7293]">
+                        {/* {userProfile?.name} */}
+                    </p>
+                    <div className="relative m-2 h-10 w-10">
                         <ImageLoader
-                            src={"/images/logo.avif"}
+                            src="/images/default.jpeg"
                             alt="userinfo"
-                            style={{ objectFit: 'contain' }}
-                            fill
+                            className="rounded-full"
+                            layout="fill"
                         />
                     </div>
-                    <div className="w-full border-b border-yellow-500" />
                 </div>
-            </nav>
-        </div>
+            </div>
+        </nav>
     )
 }

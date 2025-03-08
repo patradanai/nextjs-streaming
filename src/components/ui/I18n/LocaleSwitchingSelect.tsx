@@ -4,7 +4,7 @@ import { NextPage } from 'next'
 import { useSearchParams } from 'next/navigation'
 
 import { cn } from '@/utils/cn'
-import { usePathname, useRouter } from '@/utils/i18n/navigation'
+import { usePathname, useRouter } from '@/i18n/navigation'
 
 interface Props {
     children: React.ReactNode
