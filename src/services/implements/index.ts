@@ -1,5 +1,6 @@
 import { AuthServiceImpl } from './authServiceImpl'
-import { SocketServiceImpl } from './socketServiceImpl'
+import { ResourceServiceImpl } from './resourceServiceImpl'
+// import { SocketServiceImpl } from './socketServiceImpl'
 
 export const authService = new AuthServiceImpl()
-export const socketService = new SocketServiceImpl()
+export const resourceService = new ResourceServiceImpl()

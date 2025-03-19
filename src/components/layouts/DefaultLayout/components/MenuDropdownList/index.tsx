@@ -1,7 +1,9 @@
 import React from 'react'
 
-import { NextPage } from 'next'
 import { usePathname } from 'next/navigation'
+
+import { NextPage } from 'next'
+
 import { Link } from '@/i18n/navigation'
 
 interface Props {

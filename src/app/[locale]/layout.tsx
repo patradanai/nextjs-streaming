@@ -1,12 +1,13 @@
-import React, { use } from 'react'
+import React from 'react'
 
-import { NextIntlClientProvider, useMessages } from 'next-intl'
+import { Sarabun, Kanit } from 'next/font/google'
+import { notFound } from 'next/navigation'
+
+import { NextIntlClientProvider } from 'next-intl'
+import { getMessages } from 'next-intl/server'
 
 import { SnackBarProvider } from '@/components/providers/snackbarProvider'
 import { routing } from '@/i18n/routing'
-import { notFound } from 'next/navigation'
-import { getMessages } from 'next-intl/server'
-import { Sarabun, Kanit } from 'next/font/google'
 
 const sarabun = Sarabun({
     subsets: ['thai'],
@@ -44,4 +45,3 @@ export default async function RootLayout(props: {
         </html>
     )
 }
-NextIntlClientProvider

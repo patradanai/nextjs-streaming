@@ -13,14 +13,14 @@ interface Props {
 const Section: NextPage<Props> = ({ children, className, bgImage }) => {
     return (
         <section
-            className={cn('container mx-auto')}
+            className={cn('container mx-auto', className)}
             style={{
                 backgroundImage: bgImage,
                 backgroundRepeat: 'no-repeat',
                 backgroundSize: '100%',
             }}
         >
-            <div className={cn(className)}>{children}</div>
+            {children}
         </section>
     )
 }

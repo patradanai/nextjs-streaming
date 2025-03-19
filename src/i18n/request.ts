@@ -1,6 +1,6 @@
 import { getRequestConfig } from 'next-intl/server'
-import {routing} from './routing';
 
+import { routing } from './routing'
 import { timeZone } from '../configs/i18n.config'
 
 export default getRequestConfig(async ({ requestLocale }) => {

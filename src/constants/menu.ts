@@ -1,12 +1,5 @@
-import { faPiedPiper, faSlideshare } from '@fortawesome/free-brands-svg-icons'
-import {
-    faBox,
-    faCaravan,
-    faCartPlus,
-    faHandshake,
-    faScroll,
-    faUserFriends,
-} from '@fortawesome/free-solid-svg-icons'
+import { faGit } from '@fortawesome/free-brands-svg-icons'
+import { faCaravan, faPaintBrush } from '@fortawesome/free-solid-svg-icons'
 
 export const menu = [
     {
@@ -16,11 +9,46 @@ export const menu = [
                 name: 'DigitalOcean Management',
                 roles: [],
                 permissions: [],
-                route: '/suppliers',
+                route: '/resource',
                 icon: faCaravan,
                 sub_menu: [
                     {
                         name: '',
+                        roles: [],
+                        permissions: [],
+                        route: '',
+                    },
+                ],
+            },
+            {
+                name: 'Repository',
+                roles: [],
+                permissions: [],
+                route: '/repository',
+                icon: faGit,
+                sub_menu: [
+                    {
+                        name: 'Repository',
+                        roles: [],
+                        permissions: [],
+                        route: '',
+                    },
+                ],
+            },
+        ],
+    },
+    {
+        groupName: 'Settings',
+        groupRoutes: [
+            {
+                name: 'API KEY',
+                roles: [],
+                permissions: [],
+                route: '/settings/api',
+                icon: faPaintBrush,
+                sub_menu: [
+                    {
+                        name: 'Repository',
                         roles: [],
                         permissions: [],
                         route: '',

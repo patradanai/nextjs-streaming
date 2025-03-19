@@ -17,7 +17,8 @@ export const TabMenu: NextPage<Props> = ({
     rightComponent,
     afterIndex,
 }) => {
-    const [childs, setChilds] = useState<(React.ReactElement<any> | number | string)[]>()
+    const [childs, setChilds] =
+        useState<(React.ReactElement<any> | number | string)[]>()
     const [currentIndex, setCurrentIndex] = useState<number>(0)
 
     const handleChange = (index: number) => {
@@ -54,7 +55,7 @@ export const TabMenu: NextPage<Props> = ({
         <div>
             <div
                 className={cn(
-                    'bg-white w-full h-[54px] flex justify-between items-center px-5 rounded-md',
+                    'flex h-[54px] w-full items-center justify-between rounded-md bg-white px-5',
                     className
                 )}
             >

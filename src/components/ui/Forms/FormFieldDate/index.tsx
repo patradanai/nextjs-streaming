@@ -61,7 +61,7 @@ export const InputDate: NextPage<Props> = ({
                 </label>
             </div>
             <div className="bg-gray/20 flex w-full justify-center">
-                <div className="focus-within:outline-blue box-border flex w-full items-center overflow-hidden  rounded-sm outline outline-1 outline-[#e6e6e6] focus-within:outline-2">
+                <div className="focus-within:outline-blue box-border flex w-full items-center overflow-hidden rounded-sm outline outline-1 outline-[#e6e6e6] focus-within:outline-2">
                     {startIcon && (
                         <div className="grid h-[38px] w-[45px] place-items-center bg-[#f2f2f2]">
                             {startIcon}
@@ -71,7 +71,7 @@ export const InputDate: NextPage<Props> = ({
                         portalId="root-portal"
                         wrapperClassName="w-full bg-white"
                         className={cn(
-                            'w-full bg-white placeholder-[#9c9b9b] placeholder:text-sm appearance-none outline-hidden h-[38px] px-5 text-center rounded-sm bg-transparent',
+                            'outline-hidden h-[38px] w-full appearance-none rounded-sm bg-transparent bg-white px-5 text-center placeholder-[#9c9b9b] placeholder:text-sm',
                             datepickerClassName
                         )}
                         popperClassName="z-999"

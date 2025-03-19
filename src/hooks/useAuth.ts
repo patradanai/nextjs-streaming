@@ -1,7 +1,7 @@
 import { useMutation } from '@tanstack/react-query'
 
-import { useSnackBar } from '@/components/providers/snackbarContext'
-import { HttpException } from '@/services/exception'
+import { useSnackBar } from '@/components/providers/snackbarProvider'
+import { HttpException } from '@/exceptions/exceptionHttp'
 import { authService } from '@/services/implements'
 import {
     IGetRefreshTokenResponse,

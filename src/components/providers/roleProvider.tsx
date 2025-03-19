@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 import _ from 'lodash'
 import { NextPage } from 'next'
@@ -10,13 +10,13 @@ interface Props {
 }
 
 interface RoleProviderProps {
-    children?: unknown;
-    permissions: "create" | "update" | "delete";
+    children?: unknown
+    permissions: 'create' | 'update' | 'delete'
 }
 
 export const RoleProvider: NextPage<Props> = ({
     children,
-    permissions
+    permissions,
 }: RoleProviderProps) => {
     return _.get([], permissions) ? <>{children}</> : null
 }

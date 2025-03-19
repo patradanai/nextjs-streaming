@@ -52,7 +52,7 @@ export const InputSearch: NextPage<Props> = ({
             <div
                 className={
                     (cn(outterClassName),
-                    'flex items-center rounded-sm outline outline-1  outline-[rgba(196,196,196,0.8)] focus-within:outline-blue focus-within:outline-2 box-border bg-white')
+                    'focus-within:outline-blue box-border flex items-center rounded-sm bg-white outline outline-1 outline-[rgba(196,196,196,0.8)] focus-within:outline-2')
                 }
             >
                 <div className="bg-inherit px-2">
@@ -70,7 +70,7 @@ export const InputSearch: NextPage<Props> = ({
                         value={value}
                         onChange={(event: any) => handleChange(event)}
                         className={cn(
-                            'pl-3 placeholder:text-sm appearance-none w-full h-[38px] outline-hidden',
+                            'outline-hidden h-[38px] w-full appearance-none pl-3 placeholder:text-sm',
                             inputClassName
                         )}
                     />

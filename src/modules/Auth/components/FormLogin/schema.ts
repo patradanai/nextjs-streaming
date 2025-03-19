@@ -1,11 +1,11 @@
 import { z, ZodType } from 'zod'
 
-export interface UserFormData {
+export interface IUserFormData {
     user: string
     password: string
 }
 
-export const UserSchema: ZodType<UserFormData> = z.object({
+export const UserSchema: ZodType<IUserFormData> = z.object({
     user: z.string(),
     password: z
         .string()

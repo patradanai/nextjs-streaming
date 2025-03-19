@@ -55,10 +55,10 @@ export const InputCurrency: NextPage<Props> = ({
             <div
                 className={cn(
                     outterClassName,
-                    'flex items-center rounded-sm outline outline-1  outline-[rgba(196,196,196,0.8)] focus-within:outline-blue focus-within:outline-2 box-border bg-white'
+                    'focus-within:outline-blue box-border flex items-center rounded-sm bg-white outline outline-1 outline-[rgba(196,196,196,0.8)] focus-within:outline-2'
                 )}
             >
-                <div className="focus-within:outline-blue box-border flex w-full items-center overflow-hidden  rounded-sm outline outline-1 outline-[#e6e6e6] focus-within:outline-2">
+                <div className="focus-within:outline-blue box-border flex w-full items-center overflow-hidden rounded-sm outline outline-1 outline-[#e6e6e6] focus-within:outline-2">
                     {startIcon && (
                         <div className="grid h-[38px] w-[45px] place-items-center bg-[#f2f2f2]">
                             {startIcon}
@@ -69,7 +69,7 @@ export const InputCurrency: NextPage<Props> = ({
                         id={name}
                         name={name}
                         placeholder={placeholder}
-                        className={cn(inputClassName, 'w-full h-[38px] px-2')}
+                        className={cn(inputClassName, 'h-[38px] w-full px-2')}
                         defaultValue={0}
                         value={value || 0}
                         decimalsLimit={3}

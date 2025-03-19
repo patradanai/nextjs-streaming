@@ -1,10 +1,11 @@
 import React, { ChangeEvent, useTransition } from 'react'
 
-import { NextPage } from 'next'
 import { useSearchParams } from 'next/navigation'
 
-import { cn } from '@/utils/cn'
+import { NextPage } from 'next'
+
 import { usePathname, useRouter } from '@/i18n/navigation'
+import { cn } from '@/utils/cn'
 
 interface Props {
     children: React.ReactNode

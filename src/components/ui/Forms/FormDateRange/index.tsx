@@ -70,13 +70,13 @@ export const InputDateRange: NextPage<Props> = ({
                     </label>
                 </div>
             )}
-            <div className="focus-within:outline-blue box-border flex w-full items-center overflow-hidden  rounded-sm outline outline-1 outline-[#e6e6e6] focus-within:outline-2">
+            <div className="focus-within:outline-blue box-border flex w-full items-center overflow-hidden rounded-sm outline outline-1 outline-[#e6e6e6] focus-within:outline-2">
                 <DatePicker
                     selectsRange
                     portalId="root-portal"
                     wrapperClassName="w-full bg-white"
                     className={cn(
-                        'w-full bg-white placeholder-[#9c9b9b] text-sm placeholder:text-sm appearance-none outline-hidden h-[38px] px-5 text-center rounded-sm bg-transparent',
+                        'outline-hidden h-[38px] w-full appearance-none rounded-sm bg-transparent bg-white px-5 text-center text-sm placeholder-[#9c9b9b] placeholder:text-sm',
                         datepickerClassName
                     )}
                     timeFormat="HH:mm"

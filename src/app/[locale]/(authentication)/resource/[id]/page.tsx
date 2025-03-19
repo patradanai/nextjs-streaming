@@ -1,4 +1,4 @@
-import UpdateResourceModule from '@/modules/Resource/Update'
+import EditResourceModule from '@/modules/Resource/Edit'
 
 const UpdateResourcePage = async ({
     params,
@@ -9,7 +9,7 @@ const UpdateResourcePage = async ({
 
     return (
         <>
-            <UpdateResourceModule id={id} />
+            <EditResourceModule id={id} />
         </>
     )
 }

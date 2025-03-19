@@ -34,8 +34,8 @@ export const InputArea: NextPage<Props> = ({
     handleOnChange,
 }) => {
     return (
-        <div className={cn('w-full mb-5', containerClassName)}>
-            <div className={cn('flex flex-col h-full', innerClassName)}>
+        <div className={cn('mb-5 w-full', containerClassName)}>
+            <div className={cn('flex h-full flex-col', innerClassName)}>
                 {label && (
                     <div className={cn('mb-3')}>
                         <label
@@ -62,7 +62,7 @@ export const InputArea: NextPage<Props> = ({
                                 disabled,
                         },
                         cn(
-                            'bg-white placeholder-[#9c9b9b] placeholder:text-sm appearance-none outline-hidden h-full min-h-[100px] p-5 border border-[#e6e6e6] rounded-sm w-full',
+                            'outline-hidden h-full min-h-[100px] w-full appearance-none rounded-sm border border-[#e6e6e6] bg-white p-5 placeholder-[#9c9b9b] placeholder:text-sm',
                             inputClassName
                         )
                     )}

@@ -3,9 +3,9 @@ import React from 'react'
 
 import { NextPage } from 'next'
 
-import { Header } from './Header'
-import { Sidebar } from './Sidebar'
 import { useGlobalStore } from '@/stores/useGlobalStore'
+
+import { Sidebar } from './Sidebar'
 
 /**
  *

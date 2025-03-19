@@ -209,21 +209,21 @@ const Table = <T extends object>({
                                 {'<<'}
                             </button>
                             <button
-                                className="grid  size-10 place-items-center rounded-lg border border-gray-300 bg-[#f0f3ff] text-[#364AD9] opacity-80"
+                                className="grid size-10 place-items-center rounded-lg border border-gray-300 bg-[#f0f3ff] text-[#364AD9] opacity-80"
                                 onClick={() => table.previousPage()}
                                 disabled={!table.getCanPreviousPage()}
                             >
                                 {'<'}
                             </button>
                             <button
-                                className="grid  size-10 place-items-center rounded-lg border border-gray-300 bg-[#f0f3ff] text-[#364AD9] opacity-80"
+                                className="grid size-10 place-items-center rounded-lg border border-gray-300 bg-[#f0f3ff] text-[#364AD9] opacity-80"
                                 onClick={() => table.nextPage()}
                                 disabled={!table.getCanNextPage()}
                             >
                                 {'>'}
                             </button>
                             <button
-                                className="grid  size-10 place-items-center rounded-lg border border-gray-300 bg-[#f0f3ff] text-[#364AD9] opacity-80"
+                                className="grid size-10 place-items-center rounded-lg border border-gray-300 bg-[#f0f3ff] text-[#364AD9] opacity-80"
                                 onClick={() =>
                                     table.setPageIndex(table.getPageCount() - 1)
                                 }

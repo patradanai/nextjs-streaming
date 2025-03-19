@@ -2,9 +2,10 @@
 
 import React, { useEffect, useState } from 'react'
 
-import { NextPage } from 'next'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+
+import { NextPage } from 'next'
 
 import breadcrumbConstant from '@/constants/breadcrumb.json'
 

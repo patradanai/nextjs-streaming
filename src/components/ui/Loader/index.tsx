@@ -2,6 +2,7 @@ import React from 'react'
 
 import _ from 'lodash'
 import { NextPage } from 'next'
+
 interface Props {
     isLoading: boolean[]
 }
@@ -15,7 +16,7 @@ export const Loader: NextPage<Props> = ({ isLoading = [false] }) => {
         >
             <div className="bg-gray/25 flex h-[40px] items-center justify-center rounded-md px-20 py-8">
                 <p className="text-sm text-[#999]">Please loading...</p>
-                <span className="ml-5 size-6 animate-spin rounded-full border-4 border-[#c2c0c0] border-b-primary" />
+                <span className="border-b-primary ml-5 size-6 animate-spin rounded-full border-4 border-[#c2c0c0]" />
             </div>
         </div>
     )

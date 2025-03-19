@@ -2,21 +2,23 @@ import React from 'react'
 
 import { faSignOut } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import type { NextPage } from 'next'
-import { signOut, useSession } from 'next-auth/react'
+import { signOut } from 'next-auth/react'
 import { useShallow } from 'zustand/react/shallow'
 
 // import { LocaleSwitcher } from '@/components/ui/I18n/LocaleSwitching'
 import { ImageLoader } from '@/components/ui/ImageLoader'
 import * as Menu from '@/constants/menu'
+import { Link } from '@/i18n/navigation'
 import { useGlobalStore } from '@/stores/useGlobalStore'
 import { cn } from '@/utils/cn'
 import { env } from '@/utils/env'
-import { Link } from '@/i18n/navigation'
-import ListMenu from './components/MenuList'
-import ListMenuDropHeader from './components/MenuHeader'
-import ListMenuDropdownChild from './components/MenuDropdownList'
+
 import ListMenuDropdown from './components/MenuDropDown'
+import ListMenuDropdownChild from './components/MenuDropdownList'
+import ListMenuDropHeader from './components/MenuHeader'
+import ListMenu from './components/MenuList'
+
+import type { NextPage } from 'next'
 
 export const Sidebar: NextPage = () => {
     const { isShowSidebar, icon } = useGlobalStore(
@@ -101,7 +103,7 @@ export const Sidebar: NextPage = () => {
                                 <Link href="/">
                                     <ImageLoader
                                         alt="logo"
-                                        src={icon || '/images/logo.webp'}
+                                        src={icon || '/images/logo.avif'}
                                         style={{ objectFit: 'contain' }}
                                         width={100}
                                         height={100}

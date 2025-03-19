@@ -3,8 +3,9 @@ import '@/configs/fontawesome.config'
 
 import React from 'react'
 
-import type { Viewport } from 'next'
 import ErrorModal from '@/components/ErrorModal'
+
+import type { Viewport } from 'next'
 
 export const viewport: Viewport = {
     initialScale: 1,

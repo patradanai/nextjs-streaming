@@ -15,7 +15,7 @@ const ListMenuDropHeader: NextPage<IListMenuDropHeader> = ({
         <>
             <li className="mt-5 h-[25px] px-[27px] text-[#3b3b3c]">
                 {isShowSidebar ? (
-                    <p className="text-primary text-base uppercase">
+                    <p className="mb-5 font-bold uppercase text-black">
                         {headerName}
                     </p>
                 ) : (

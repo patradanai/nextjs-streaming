@@ -1,15 +1,12 @@
 import React from 'react'
 
 import { NextPage } from 'next'
-
-import { ImageLoader } from '@/components/ui/ImageLoader'
-import { env } from '@/utils/env'
-import { useGlobalStore } from '@/stores/useGlobalStore'
 import { useShallow } from 'zustand/react/shallow'
 
-interface IHeader {}
+import { ImageLoader } from '@/components/ui/ImageLoader'
+import { useGlobalStore } from '@/stores/useGlobalStore'
 
-export const Header: NextPage<IHeader> = async () => {
+export const Header: NextPage = () => {
     const { name, isShowSidebar } = useGlobalStore(
         useShallow((state) => ({
             isShowSidebar: state.isShowSidebar,
@@ -37,7 +34,7 @@ export const Header: NextPage<IHeader> = async () => {
                     </p>
                     <div className="relative m-2 h-10 w-10">
                         <ImageLoader
-                            src="/images/default.jpeg"
+                            src="/images/logo.avif"
                             alt="userinfo"
                             className="rounded-full"
                             layout="fill"

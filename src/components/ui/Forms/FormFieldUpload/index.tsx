@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { NextPage } from 'next'
 
 import ThumbImage from './thumb'
+
 interface Props {
     files: any
     onChangFile: (_field: string, _event: any) => void
@@ -58,7 +59,7 @@ export const InputUpload: NextPage<Props> = ({
                     )}
                 </label>
                 <button
-                    className="absolute -right-5 top-0 z-9999 flex cursor-pointer items-center rounded-full bg-primary/20 p-1"
+                    className="z-9999 bg-primary/20 absolute -right-5 top-0 flex cursor-pointer items-center rounded-full p-1"
                     onClick={handleCancel}
                 >
                     <FontAwesomeIcon icon={faClose} className="size-8" />

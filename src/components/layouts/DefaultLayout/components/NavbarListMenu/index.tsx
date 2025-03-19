@@ -17,7 +17,7 @@ export const NavbarListMenu: NextPage<INavbarListMenu> = ({
                 'sticky inset-x-0 top-0 z-10 h-[54px] w-full bg-transparent'
             }
         >
-            <div className="flex h-full flex-row items-center justify-between border-b-secondary px-8">
+            <div className="border-b-secondary flex h-full flex-row items-center justify-between px-8">
                 {/* Agent Name */}
                 <div className="">
                     <BreadCrumb />

@@ -8,7 +8,7 @@
         "plugin:@typescript-eslint/recommended",
         "prettier"
     ],
-    "plugins": ["check-file", "prettier", "react"],
+    "plugins": ["check-file", "prettier", "react", "unused-imports"],
     "parserOptions": {
         "ecmaVersion": 2021,
         "sourceType": "module",
@@ -23,6 +23,9 @@
     "settings": {
         "react": {
             "version": "detect"
+        },
+        "import/resolver": {
+            "typescript": {}
         }
     },
     "overrides": [
@@ -39,14 +42,14 @@
             { "avoidEscape": true, "allowTemplateLiterals": false }
         ],
         "no-confusing-arrow": ["error", { "allowParens": false }],
-        "no-unused-vars": [
-            2,
+        "no-unused-vars": "off",
+        "unused-imports/no-unused-imports": "error",
+        "unused-imports/no-unused-vars": [
+            "warn",
             {
                 "vars": "all",
-                "args": "after-used",
-                "ignoreRestSiblings": true,
-                "caughtErrors": "none",
                 "varsIgnorePattern": "^_",
+                "args": "after-used",
                 "argsIgnorePattern": "^_"
             }
         ],
@@ -61,15 +64,33 @@
         "import/order": [
             "error",
             {
-                "groups": ["builtin", "external", "internal"],
+                "groups": [
+                    "builtin",
+                    "external",
+                    "internal",
+                    ["parent", "sibling"],
+                    "index",
+                    "object",
+                    "type"
+                ],
                 "pathGroups": [
                     {
                         "pattern": "react",
                         "group": "external",
                         "position": "before"
+                    },
+                    {
+                        "pattern": "next/**",
+                        "group": "external",
+                        "position": "before"
+                    },
+                    {
+                        "pattern": "@/**",
+                        "group": "internal",
+                        "position": "after"
                     }
                 ],
-                "pathGroupsExcludedImportTypes": ["react"],
+                "pathGroupsExcludedImportTypes": ["react", "next"],
                 "newlines-between": "always",
                 "alphabetize": {
                     "order": "asc",
@@ -77,8 +98,10 @@
                 }
             }
         ],
+        "import/first": "error",
+        "import/newline-after-import": "error",
+        "import/no-duplicates": "error",
 
-        // Tailwind
         "tailwindcss/no-custom-classname": [
             0,
             {
@@ -86,7 +109,6 @@
             }
         ],
 
-        // Typecript
         "@typescript-eslint/naming-convention": [
             "error",
             {
@@ -149,7 +171,6 @@
         "@typescript-eslint/no-unused-vars": "off",
         "@typescript-eslint/no-empty-interface": "off",
 
-        // REACT RULE
         "react/react-in-jsx-scope": "off",
         "react/jsx-uses-react": "off",
         "react/jsx-uses-vars": "error",
@@ -159,9 +180,8 @@
         ],
         "react/display-name": "warn",
         "react/prop-types": "off",
-        "react/no-unknown-property": "off", // Nextjs use jsx
+        "react/no-unknown-property": "off",
 
-        // ALLY11
         "jsx-a11y/click-events-have-key-events": "off",
         "jsx-a11y/anchor-is-valid": "off",
         "jsx-a11y/no-noninteractive-element-interactions": [
@@ -178,7 +198,6 @@
             }
         ],
 
-        // AirBnb
         "no-multi-spaces": "error",
         "jsx-quotes": ["error", "prefer-double"],
         "react/jsx-closing-tag-location": [1, "line-aligned"],
@@ -194,7 +213,7 @@
         "react/jsx-no-bind": ["error", { "allowArrowFunctions": true }],
         "react/require-render-return": "error",
         "react/sort-comp": "warn",
-        // FileName, Folder convention
+
         "check-file/folder-naming-convention": [
             "error",
             {

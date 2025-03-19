@@ -40,7 +40,7 @@ export const ModalOpacity: NextPage<IModalOpacity> = ({
                     transition={{ duration: 0.5 }}
                     className={`${
                         isModal ? 'pointer-events-auto' : 'pointer-events-none'
-                    } fixed left-0 top-0 z-100 size-full min-w-[600px]`}
+                    } z-100 fixed left-0 top-0 size-full min-w-[600px]`}
                 >
                     <button
                         className={

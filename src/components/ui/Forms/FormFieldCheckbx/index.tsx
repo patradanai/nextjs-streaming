@@ -32,7 +32,7 @@ export const InputCheckbox: NextPage<Props> = ({
                     <input
                         className={cn(
                             inputClassName,
-                            'scale-[1.3] md:scale-[1.5] border-gray-400 mr-2'
+                            'mr-2 scale-[1.3] border-gray-400 md:scale-[1.5]'
                         )}
                         onChange={handleOnChange}
                         placeholder={placeholder}

@@ -1,8 +1,5 @@
-/* eslint-disable no-unused-vars */
 /* eslint-disable @typescript-eslint/naming-convention */
-import { extend } from 'lodash'
-import NextAuth, { DefaultSession, DefaultJWT, DefaultUser } from 'next-auth'
-import { JWT } from 'next-auth/jwt'
+import { DefaultSession, DefaultJWT, DefaultUser } from 'next-auth'
 
 type UserProfile = { id: string } & DefaultSession['user']
 declare module 'next-auth' {

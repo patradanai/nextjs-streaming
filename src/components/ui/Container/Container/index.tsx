@@ -22,7 +22,7 @@ const Container: NextPage<Props> = ({
     return (
         <main
             className={cn(
-                'flex flex-col w-full h-full min-h-screen',
+                'flex h-full min-h-screen w-full flex-col',
                 className
             )}
             style={{ backgroundImage: bgImage }}
@@ -30,12 +30,12 @@ const Container: NextPage<Props> = ({
             {isBackdrop && (
                 <div
                     className={cn(
-                        'absolute z-0 top-0 left-0 bg-white/20 w-full h-full',
+                        'absolute left-0 top-0 z-0 h-full w-full bg-white/20',
                         backdrop
                     )}
                 />
             )}
-            <div className={cn('w-full min-h-screen')}>{children}</div>
+            <div className={cn('min-h-screen w-full')}>{children}</div>
         </main>
     )
 }

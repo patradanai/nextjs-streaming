@@ -1,10 +1,11 @@
-import type { NextAuthOptions } from 'next-auth'
 import { JWT } from 'next-auth/jwt'
 import Credentials from 'next-auth/providers/credentials'
 
 import { authService } from '@/services/implements'
 import { env } from '@/utils/env'
 import { logger } from '@/utils/logger'
+
+import type { NextAuthOptions } from 'next-auth'
 
 const refreshTokenHandler = async (token: JWT) => {
     logger(token, 'token')

@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 
-import { usePathname } from 'next/navigation'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 interface IListMenu {
     icons: React.ReactNode

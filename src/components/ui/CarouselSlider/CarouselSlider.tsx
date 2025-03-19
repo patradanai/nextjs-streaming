@@ -17,7 +17,7 @@ const NextArrow = (props: CustomArrowProps) => {
         >
             <FontAwesomeIcon
                 icon={['fas', 'arrow-alt-circle-right']}
-                className="hidden size-8 md:block "
+                className="hidden size-8 md:block"
             />
         </div>
     )

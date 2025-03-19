@@ -78,7 +78,7 @@ const Button: NextPage<Props> = ({
             type={type}
             disabled={disabled || loading}
             className={cn(
-                'h-fit w-full gap-3 flex transition-colors justify-center items-center whitespace-nowrap shadow-xs hover:shadow-md rounded-md',
+                'shadow-xs flex h-fit w-full items-center justify-center gap-3 whitespace-nowrap rounded-md transition-colors hover:shadow-md',
                 sizes[size],
                 colors[color],
                 variants[variant],
@@ -87,7 +87,7 @@ const Button: NextPage<Props> = ({
                     'shadow-none hover:shadow-none': disableElevation,
                 },
                 {
-                    'text-gray-400 bg-gray-300/60 border-gray-400/50 pointer-events-none':
+                    'pointer-events-none border-gray-400/50 bg-gray-300/60 text-gray-400':
                         disabled,
                 }
             )}

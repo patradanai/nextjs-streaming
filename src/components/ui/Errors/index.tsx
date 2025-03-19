@@ -1,7 +1,7 @@
 import React from 'react'
 
-import _ from 'lodash'
 import { NextPage } from 'next'
+
 interface Props {}
 
 export const Error: NextPage<Props> = () => {

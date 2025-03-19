@@ -1,7 +1,6 @@
 'use client'
 import React, { useState, useEffect } from 'react'
 
-import * as _ from 'lodash'
 import { useRouter } from 'next/navigation'
 
 import { PermissionPage } from '@/app/401'

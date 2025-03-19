@@ -1,6 +1,8 @@
-import { cn } from '@/utils/cn'
 import React, { HTMLInputTypeAttribute } from 'react'
+
 import { UseFormRegister, FieldValues, FieldError } from 'react-hook-form'
+
+import { cn } from '@/utils/cn'
 
 interface InputProps {
     name: string
@@ -43,7 +45,7 @@ const FormInput = React.forwardRef<
             >
                 {label}
             </label>
-            <div className="focus-within:outline-blue box-border flex w-full items-center overflow-hidden rounded-sm outline outline-1 outline-[#E6E6E6FF] focus-within:outline-2">
+            <div className="focus-within:outline-blue box-border flex w-full items-center overflow-hidden rounded-sm outline outline-[#E6E6E6FF] focus-within:outline-2">
                 {startIcon && (
                     <div className="grid h-[38px] w-[45px] place-items-center bg-[#f2f2f2]">
                         {startIcon}
@@ -76,5 +78,7 @@ const FormInput = React.forwardRef<
         </>
     )
 )
+
+FormInput.displayName = 'FormInput'
 
 export default FormInput

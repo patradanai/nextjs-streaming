@@ -33,8 +33,7 @@ export const TimelineHorizontal: NextPage<PropsTimelineHorizontal> = (
                     <div
                         className={`absolute left-1/2 top-1/2 -mt-3 grid size-6 -translate-x-1/2 place-items-center rounded-full ${
                             isChecked ? CHECKED_COLOR : UNCHECKED_COLOR
-                        }
-                     text-center shadow`}
+                        } text-center shadow`}
                     >
                         <FontAwesomeIcon icon={faCheck} className="size-4" />
                     </div>
@@ -47,7 +46,7 @@ export const TimelineHorizontal: NextPage<PropsTimelineHorizontal> = (
                     <div
                         className={`rounded-xl p-4 shadow-md ${
                             isChecked ? CHECKED_COLOR : UNCHECKED_COLOR
-                        } text-white `}
+                        } text-white`}
                     >
                         {children}
                     </div>
