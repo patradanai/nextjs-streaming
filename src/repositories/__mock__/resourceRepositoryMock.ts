@@ -3,7 +3,10 @@ import {
     ICreateResourceRequest,
     ICreateResourceResponse,
 } from '@/types/repositories/resource/createResouce'
-import { IDeleteResourceRequest } from '@/types/repositories/resource/deleteResource'
+import {
+    IDeleteResourceRequest,
+    IDeleteResourceResponse,
+} from '@/types/repositories/resource/deleteResource'
 import {
     IGetResourceRequest,
     IGetResourceResponse,
@@ -22,22 +25,41 @@ import { ResourceRepository } from '../resourceRepository'
 
 export class ResourceRepositoryImplMock implements ResourceRepository {
     patchResource(
-        req: IPatchResourceRequest
+        _req: IPatchResourceRequest
     ): Promise<WrapperResponse<IPatchResourceResponse>> {
         throw new Error('Method not implemented.')
     }
     deleteResource(
-        req: IDeleteResourceRequest
-    ): Promise<WrapperResponse<IGetResourceResponse>> {
-        throw new Error('Method not implemented.')
+        _req: IDeleteResourceRequest
+    ): Promise<WrapperResponse<IDeleteResourceResponse>> {
+        return new Promise((resolve) => {
+            resolve({
+                status: 200,
+                code: 'E1R0100',
+                message: 'Success',
+                data: {
+                    id: '1',
+                },
+            })
+        })
     }
     createResource(
-        req: ICreateResourceRequest
+        _req: ICreateResourceRequest
     ): Promise<WrapperResponse<ICreateResourceResponse>> {
-        throw new Error('Method not implemented.')
+        return new Promise((resolve) => {
+            resolve({
+                status: 200,
+                code: 'E1R0100',
+                message: 'Success',
+                data: {
+                    id: '1',
+                },
+            })
+        })
     }
+
     getResourceDetail(
-        req: IGetResourceRequest
+        _req: IGetResourceRequest
     ): Promise<WrapperResponse<IGetResourceResponse>> {
         return new Promise((resolve) => {
             const data: IGetResourceResponse = {
@@ -67,8 +89,9 @@ export class ResourceRepositoryImplMock implements ResourceRepository {
             })
         })
     }
+
     getResources(
-        req: IGetListResourceRequest
+        _req: IGetListResourceRequest
     ): Promise<WrapperResponsePagination<IGetListResourceResponse>> {
         return new Promise((resolve) => {
             const data: IGetListResourceData[] = [

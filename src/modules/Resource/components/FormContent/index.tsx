@@ -60,7 +60,7 @@ const FormContent = () => {
                     errors={errors.description}
                 />
 
-                <FormSelection>
+                <FormSelection label="Category">
                     <FormSelection.Option value="1">One</FormSelection.Option>
                     <FormSelection.Option value="2">Two</FormSelection.Option>
                     <FormSelection.Option value="3">Three</FormSelection.Option>
@@ -84,18 +84,24 @@ const FormContent = () => {
                         <Accordion.Header>Meta Description</Accordion.Header>
                         <Accordion.Content>
                             <FormInput
-                                {...register('title')}
+                                {...register('metaDescription.title')}
                                 label="Title"
                                 required
                                 errors={errors.title}
                             />
                             <FormInputArea
-                                {...register('title')}
+                                {...register('metaDescription.title')}
                                 label="Description"
                                 errors={errors.description}
                             />
-                            <FormInputSwitch label="isFollow" />
-                            <FormInputSwitch label="isIndex" />
+                            <FormInputSwitch
+                                {...register('metaDescription.isFollow')}
+                                label="isFollow"
+                            />
+                            <FormInputSwitch
+                                {...register('metaDescription.isIndex')}
+                                label="isIndex"
+                            />
                         </Accordion.Content>
                     </Accordion.Item>
                 </Accordion>

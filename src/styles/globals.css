@@ -15,8 +15,14 @@
     --animate-bounce-lower: bounceLower 1s infinite;
     --animate-flicker: flicker 1s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 
-    --font-sarabun: var(--font-sarabun);
-    --font-kanit: var(--font-kanit);
+    --font-kanit:
+        Kanit, ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
+        'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+
+    --font-sarabun:
+        Mochiy Pop One, ui-sans-serif, system-ui, sans-serif,
+        'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+        'Noto Color Emoji';
 
     --color-success: #206521;
     --color-warning: #fbbf24;

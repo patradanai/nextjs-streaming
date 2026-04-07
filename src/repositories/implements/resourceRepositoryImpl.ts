@@ -3,7 +3,10 @@ import {
     ICreateResourceRequest,
     ICreateResourceResponse,
 } from '@/types/repositories/resource/createResouce'
-import { IDeleteResourceRequest } from '@/types/repositories/resource/deleteResource'
+import {
+    IDeleteResourceRequest,
+    IDeleteResourceResponse,
+} from '@/types/repositories/resource/deleteResource'
 import {
     IGetResourceRequest,
     IGetResourceResponse,
@@ -31,7 +34,7 @@ export class ResourceRepositoryImpl
     }
     deleteResource(
         req: IDeleteResourceRequest
-    ): Promise<WrapperResponse<IGetResourceResponse>> {
+    ): Promise<WrapperResponse<IDeleteResourceResponse>> {
         throw new Error('Method not implemented.')
     }
     createResource(

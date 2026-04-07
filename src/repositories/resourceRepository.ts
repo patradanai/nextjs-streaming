@@ -3,7 +3,10 @@ import {
     ICreateResourceRequest,
     ICreateResourceResponse,
 } from '@/types/repositories/resource/createResouce'
-import { IDeleteResourceRequest } from '@/types/repositories/resource/deleteResource'
+import {
+    IDeleteResourceRequest,
+    IDeleteResourceResponse,
+} from '@/types/repositories/resource/deleteResource'
 import {
     IGetResourceRequest,
     IGetResourceResponse,
@@ -32,7 +35,7 @@ export abstract class ResourceRepository {
 
     abstract deleteResource(
         req: IDeleteResourceRequest
-    ): Promise<WrapperResponse<IGetResourceResponse>>
+    ): Promise<WrapperResponse<IDeleteResourceResponse>>
 
     abstract createResource(
         req: ICreateResourceRequest

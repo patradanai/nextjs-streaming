@@ -4,46 +4,63 @@ import { logger } from '../logger'
 
 // socket Connection
 class SocketBase {
-    private socket: Socket
+    private socket: Socket | null = null
+    private url: string
 
     constructor(url: string) {
-        this.socket = io(url)
+        this.url = url
     }
 
     public initialize(): this {
-        this.socket.on('connect', () => {
-            logger('Socket connection established')
-        })
+        if (!this.socket) {
+            this.socket = io(this.url)
+            this.socket.on('connect', () => {
+                logger('Socket connection established')
+            })
 
-        this.socket.on('disconnect', () => {
-            logger('Socket connection closed')
-        })
+            this.socket.on('disconnect', () => {
+                logger('Socket connection closed')
+            })
 
-        this.socket.on('connect_error', (error) => {
-            logger('Socket connection error:', error)
-        })
+            this.socket.on('connect_error', (error) => {
+                logger('Socket connection error:', error)
+            })
+        }
 
         return this
     }
 
+    private ensureInitialized() {
+        if (!this.socket) {
+            throw new Error(
+                'Socket is not initialized. Call initialize() first.'
+            )
+        }
+    }
+
     public on(event: string, callback: (data: any) => void) {
-        this.socket.on(event, callback)
+        this.ensureInitialized()
+        this.socket!.on(event, callback)
     }
 
     public off(event: string, callback?: (data: any) => void) {
-        this.socket.off(event, callback)
+        this.ensureInitialized()
+        this.socket!.off(event, callback)
     }
 
     public emit(event: string, data: any) {
-        this.socket.emit(event, data)
+        this.ensureInitialized()
+        this.socket!.emit(event, data)
     }
 
     public disconnect() {
-        this.socket.disconnect()
+        this.ensureInitialized()
+        this.socket!.disconnect()
     }
 
     public isConnected(): boolean {
-        return this.socket.connected
+        this.ensureInitialized()
+        return this.socket!.connected
     }
 }
 
