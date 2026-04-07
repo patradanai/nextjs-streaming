@@ -1,3 +1,6 @@
+import nextTypescript from "eslint-config-next/typescript";
+import next from "eslint-config-next";
+import nextCoreWebVitals from "eslint-config-next/core-web-vitals";
 import checkFile from "eslint-plugin-check-file";
 import prettier from "eslint-plugin-prettier";
 import react from "eslint-plugin-react";
@@ -16,16 +19,9 @@ const compat = new FlatCompat({
     allConfig: js.configs.all
 });
 
-export default [{
+export default [...nextTypescript, {
     ignores: ["**/node_modules", "**/dist"],
-}, ...compat.extends(
-    "next",
-    "next/core-web-vitals",
-    "eslint:recommended",
-    "plugin:react/recommended",
-    "plugin:@typescript-eslint/recommended",
-    "prettier",
-), {
+}, ...next, ...nextCoreWebVitals, ...compat.extends("eslint:recommended"), ...compat.extends("plugin:react/recommended"), ...compat.extends("plugin:@typescript-eslint/recommended"), ...compat.extends("prettier"), {
     plugins: {
         "check-file": checkFile,
         prettier,
